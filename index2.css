@@ -52,21 +52,26 @@ header p {
     width: 30%;
     transition: transform 0.3s;
     text-align: center;
+    position: relative; /* Add this to ensure proper hover effect */
+    margin-bottom: 20px;
 }
 
 .platform:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Keep the hover effect */
 }
 
 .platform img {
     width: 100px;
     height: auto;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .platform h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .platform a {
@@ -77,11 +82,22 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .platform a:hover {
     background-color: #45a049;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 50px 0;
+    flex-wrap: wrap; /* Ensure responsive layout */
+}
+
 
 footer {
     margin-top: auto;
@@ -103,3 +119,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+

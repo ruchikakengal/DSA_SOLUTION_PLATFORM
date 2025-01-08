@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="styles.css" />
+    <style> 
+      /* Scroll to Top Button */
+      #scrollToTopBtn {
+          display: none;
+          position: fixed;
+          bottom: 85px;
+          right: 40px;
+          height: 50px;
+          width: 50px;
+          background-color: rgb(80, 183, 218);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 15px;
+      }
+
+      #scrollToTopBtn:hover {
+          background-color: rgb(80, 183, 218);
+      }
+
+    </style>
   </head>
   <body>
     <div class="content-wrapper">
@@ -36,6 +59,7 @@
           <a href="pages/leetcode.html">Leetcode</a>
         </div>
       </section>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button> 
     </div>
 
    <footer>
@@ -82,6 +106,33 @@
     <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">© 2024 DSA Problem Solutions. All rights reserved.</p>
   </div>
 </footer>
+
+
+<script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async></script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+    <script>
+        // Get the button element
+        const scrollBtn = document.getElementById('scrollBtn');
+    
+        // Show the button when the user scrolls down 100px from the top
+        window.onscroll = function () {
+          if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+              scrollBtn.style.display = "block";
+          } else {
+              scrollBtn.style.display = "none";
+          }
+        };
+    
+        // Scroll to the top of the page when the button is clicked
+        scrollBtn.onclick = function () {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+        };
+    
+      </script>
 
   </body>
 </html>

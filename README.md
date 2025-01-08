@@ -1,32 +1,37 @@
-# DSA Solution Platform
+<h1 align="center" id="title">DSA solution Hub</h1>
 
-This project is a **Data Structures and Algorithms (DSA)** solution platform where users can practice, submit, and review DSA problems. It's designed to help students and developers improve their problem-solving skills in various DSA topics.
+<p id="description">This project is a collaborative platform to host and share solutions for common Data Structures and Algorithms (DSA) problems. Whether you're practicing for coding interviews contributing to open source or just aiming to brush up on DSA concepts this hub provides a well-organized accessible collection of solutions.</p>
 
-## Features
+<h2>🚀 Demo</h2>
 
-- **User Registration & Login**: Users can sign up, log in, and manage their profile.
-- **Problem Categories**: Problems are categorized by topics like Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, etc.
-- **Problem Submissions**: Users can submit solutions in multiple languages (e.g., C++, Python, Java).
-- **Code Execution**: Integrated code execution environment where users can test their solutions.
-- **Leaderboard**: See how you rank among other users based on problem-solving performance.
-- **Discussion Forum**: Users can discuss solutions and approaches with others.
-- **Hints & Solutions**: Hints and official solutions available for tough problems.
-- **Search Functionality**: Easily search for problems by name or category.
+[https://priyeshsingh24.github.io/DSA\_SOLUTION\_PLATFORM/](https://priyeshsingh24.github.io/DSA_SOLUTION_PLATFORM/)
 
-## Tech Stack
+  
+  
+<h2>🧐 Features</h2>
 
-- **Frontend**: HTML, CSS, JavaScript (React/Next.js)
-- **Backend**: Node.js, Express
-- **Database**: MongoDB/PostgreSQL
-- **Code Execution**: Docker for sandboxed code execution
-- **Authentication**: JWT (JSON Web Tokens) for secure authentication
+Here're some of the project's best features:
 
-## Installation
+<h2>🛠️ Installation Steps:</h2>
 
-1. Clone the repository:
+<p>1. - A web browser (latest version recommended)</p>
 
-   ```bash
-   git clone https://github.com/username/dsa-solution-platform.git
-   cd dsa-solution-platform
+<p>2. - Basic knowledge of Git and GitHub</p>
 
+<p>3. Clone the repository:</p>
 
+```
+git clone https://github.com/PRIYESHSINGH24/DSA_SOLUTION_PLATFORM
+```
+
+<p>4. Open index.html in your browser to run locally</p>
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   HTML
+*   CSS
+*   JAVASCRIPT

@@ -11,3 +11,7 @@
     delay:0.5,
     duration:1
  })
+ function toggleMenu() {
+   const navMenu = document.querySelector('.nav .right ul');
+   navMenu.classList.toggle('active');
+}

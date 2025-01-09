@@ -114,6 +114,14 @@ footer {
   font-weight:300;
   margin-top: 50px;
 }
+.footer-logo {
+  width: 60px; /* Smaller size for better fit */
+  height: 60px; /* Same as width to maintain circular shape */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits within the circle */
+  margin-right: 15px; /* Spacing between logo and text */
+  border: 1px solid #ddd; /* Subtle border for definition */
+}
 
 .footer-content {
   display: grid;

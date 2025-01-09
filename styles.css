@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -84,12 +85,34 @@ header p {
 .platform-card a:hover {
   background-color: #555;
 }
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 85px;
+  right: 40px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(80, 183, 218);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
 
+#scrollToTopBtn:hover {
+  background-color: rgb(80, 183, 218);
+}
 footer {
   background-color: #ffffff;
   padding: 40px 0;
-  font-family: 'Arial', sans-serif;
   color: #ffffff;
+  box-shadow: 12px 6px 14px rgba(0, 0, 0, 0.15);
+  font-family: "Outfit", serif;
+  font-weight:300;
+  margin-top: 50px;
 }
 
 .footer-content {
@@ -198,4 +221,6 @@ footer {
   padding: 20px 0;
   background-color: #e9ecef;
   font-size: 14px;
+  position: relative;
+  bottom: 0;
 }

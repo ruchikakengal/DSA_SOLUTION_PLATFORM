@@ -1,138 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DSA Problem Solutions</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="styles.css" />
-    <style> 
-      /* Scroll to Top Button */
-      #scrollToTopBtn {
-          display: none;
-          position: fixed;
-          bottom: 85px;
-          right: 40px;
-          height: 50px;
-          width: 50px;
-          background-color: rgb(80, 183, 218);
-          color: white;
-          border: none;
-          border-radius: 50%;
-          padding: 10px;
-          cursor: pointer;
-          font-size: 15px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Problem Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      #scrollToTopBtn:hover {
-          background-color: rgb(80, 183, 218);
-      }
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1>DSA Problem Solutions</h1>
+      <p>Your coding practice zone, choose your platform!</p>
+    </header>
 
-    </style>
-  </head>
-  <body>
-    <div class="content-wrapper">
-      <header>
-        <h1>DSA Problem Solutions</h1>
-        <p>Your coding practice zone, choose your platform!</p>
-      </header>
-
-      <section class="container">
-        <div class="platform-card">
-          <img src="img/geeksfor.png" alt="GeeksforGeeks Logo" />
-          <h2>GeeksforGeeks</h2>
-          <a href="pages/geeksforgeeks.html">GeeksforGeeks</a>
-        </div>
-        <div class="platform-card">
-          <img src="img/codechef.png" alt="CodeChef Logo" />
-          <h2>CodeChef</h2>
-          <a href="pages/codechef.html">CodeChef</a>
-        </div>
-        <div class="platform-card">
-          <img src="img/leetcode.png" alt="LeetCode Logo" />
-          <h2>LeetCode</h2>
-          <a href="pages/leetcode.html">Leetcode</a>
-        </div>
-      </section>
-        <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button> 
-    </div>
-
-   <footer>
-  <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
-    <div class="footer-section about" style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="Utils/20240921_154411.png" alt="DSA Problem Solutions" style="width: 100px; margin-right: 20px;">
-      <p style="margin: 0;">DSA problem solutions involve step-by-step methods to solve data structure and algorithm challenges efficiently. They include understanding the problem, selecting the right approach, implementing optimized code, and analyzing time and space complexity for performance.</p>
-    </div>
-
-    <div class="footer-section services" style="flex: 1; min-width: 150px; margin: 10px;">
-      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">DSA Problem Solutions</h2>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
-      </ul>
-    </div>
-
-
-    <div class="footer-section learn-more" style="flex: 1; min-width: 150px; margin: 10px;">
-      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">Learn More</h2>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Privacy Policy</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Security</a></li>
-        <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.paddingLeft='10px'" onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Terms of Service</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section social-links" style="flex: 1; min-width: 150px; margin: 10px;">
-      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">Follow Us</h2>
-      <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 10px;">
-        <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.transform='scale(1.2)'; this.style.display='inline-block'" onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.transform='scale(1.2)'; this.style.display='inline-block'" onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.transform='scale(1.2)'; this.style.display='inline-block'" onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.transform='scale(1.2)'; this.style.display='inline-block'" onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;" onmouseover="this.style.color='#e67e22'; this.style.transform='scale(1.2)'; this.style.display='inline-block'" onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-    </div>
+    <section class="container">
+      <div class="platform-card">
+        <img src="img/geeksfor.png" alt="GeeksforGeeks Logo" />
+        <h2>GeeksforGeeks</h2>
+        <a href="pages/geeksforgeeks.html">GeeksforGeeks</a>
+      </div>
+      <div class="platform-card">
+        <img src="img/codechef.png" alt="CodeChef Logo" />
+        <h2>CodeChef</h2>
+        <a href="pages/codechef.html">CodeChef</a>
+      </div>
+      <div class="platform-card">
+        <img src="img/leetcode.png" alt="LeetCode Logo" />
+        <h2>LeetCode</h2>
+        <a href="pages/leetcode.html">Leetcode</a>
+      </div>
+    </section>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
   </div>
 
-  <div class="footer-bottom" style="padding: 10px; text-align: center; background-color: white;">
-    <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">© 2024 DSA Problem Solutions. All rights reserved.</p>
-  </div>
-</footer>
+  <footer>
+    <div class="footer-content"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+      <div class="footer-section about"
+        style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="img/hierarchical.png" alt="DSA Problem Solutions" style="width: 100px;
+        margin-top: 40px;">
+
+        <p style="margin: 40px; text-align: justify;">DSA problem solutions involve step-by-step methods to solve data structure and algorithm
+          challenges efficiently. They include understanding the problem, selecting the right approach, implementing
+          optimized code, and analyzing time and space complexity for performance.</p>
+      </div>
+
+      <div class="footer-section services" style="flex: 1; 
+       min-width: 150px;
+        margin: 10px;">
+        <h2 style="font-size: 18px;
+         margin-bottom: 10px; 
+         transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">
+          DSA Problem Solutions</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+        </ul>
+      </div>
 
 
-<script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async></script>
-    <script src="scrollscript.js"></script>
-    <script src="audio.js"></script>
-    <script>
-        // Get the button element
-        const scrollBtn = document.getElementById('scrollBtn');
-    
-        // Show the button when the user scrolls down 100px from the top
-        window.onscroll = function () {
-          if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-              scrollBtn.style.display = "block";
-          } else {
-              scrollBtn.style.display = "none";
-          }
-        };
-    
-        // Scroll to the top of the page when the button is clicked
-        scrollBtn.onclick = function () {
-          window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-          });
-        };
-    
-      </script>
+      <div class="footer-section learn-more" style="flex: 1; min-width: 150px; margin: 10px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+          onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">Learn More</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Privacy Policy</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Security</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Terms of Service</a></li>
+        </ul>
+      </div>
 
-  </body>
+      <div class="footer-section social-links" style="flex: 1; min-width: 150px; margin: 10px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+          onmouseover="this.style.color='green'" onmouseout="this.style.color='black'">Follow Us</h2>
+        <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 10px;">
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                class="fab fa-instagram"></i></a></li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="padding: 10px; text-align: center; background-color: white;">
+      <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='green'"
+        onmouseout="this.style.color='black'"> <b>&copy;2025 DSA Problem Solutions. All rights reserved.</b></p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+  <script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async></script>
+  <script src="scrollscript.js"></script>
+  <script src="audio.js"></script>
+  <script>
+    // Get the button element
+    const scrollBtn = document.getElementById('scrollBtn');
+
+    // Show the button when the user scrolls down 100px from the top
+    window.onscroll = function () {
+      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to the top of the page when the button is clicked
+    scrollBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+
+  </script>
+
+</body>
+
 </html>

@@ -23,13 +23,96 @@
         z-index: 1000;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
-
       .navbar .logo img {
         width: 50px;
         height: auto;
         border-radius: 50%;
         transition: transform 0.3s ease;
       }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Problem Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1>DSA Problem Solutions</h1>
+      <p>Your coding practice zone, choose your platform!</p>
+    </header>
+
+    <section class="container">
+      <div class="platform-card">
+        <img src="img/geeksfor.png" alt="GeeksforGeeks Logo" />
+        <h2>GeeksforGeeks</h2>
+        <a href="pages/geeksforgeeks.html">GeeksforGeeks</a>
+      </div>
+      <div class="platform-card">
+        <img src="img/codechef.png" alt="CodeChef Logo" />
+        <h2>CodeChef</h2>
+        <a href="pages/codechef.html">CodeChef</a>
+      </div>
+      <div class="platform-card">
+        <img src="img/leetcode.png" alt="LeetCode Logo" />
+        <h2>LeetCode</h2>
+        <a href="pages/leetcode.html">Leetcode</a>
+      </div>
+      
+      <div class="platform-card">
+        <img src="img/new-cn-logo.png" alt="Code 360 by CN Logo" />
+        <h2>LeetCode</h2>
+        <a href="pages/code360bycn.html">Code 360 by Coding Ninjas</a>
+      </div>
+    </section>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+  </div>
+
+  <footer>
+    <div class="footer-content"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+      <div class="footer-section about"
+        style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="img/hierarchical.png" alt="DSA Problem Solutions" style="width: 100px;
+        margin-top: 40px;">
+
+        <p style="margin: 40px; text-align: justify;">DSA problem solutions involve step-by-step methods to solve data structure and algorithm
+          challenges efficiently. They include understanding the problem, selecting the right approach, implementing
+          optimized code, and analyzing time and space complexity for performance.</p>
+      </div>
+
+      <div class="footer-section services" style="flex: 1; 
+       min-width: 150px;
+        margin: 10px;">
+        <h2 style="font-size: 18px;
+         margin-bottom: 10px; 
+         transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">
+          DSA Problem Solutions</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+        </ul>
+      </div>
 
       .navbar .logo img:hover {
         transform: scale(1.1);
@@ -87,7 +170,6 @@
         z-index: 1000;
         transition: background-color 0.3s ease, transform 0.3s ease;
       }
-
       #scrollBtn:hover {
         background-color: #000;
         transform: scale(1.2);
@@ -194,3 +276,4 @@
     </script>
   </body>
 </html>
+

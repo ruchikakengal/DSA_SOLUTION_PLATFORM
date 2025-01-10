@@ -13,7 +13,7 @@ function handleViewSolution(problemTitle) {
                 <div class="card-content">
                     <p>Given an array of integers, return the indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
                     <pre>
-                    <code>
+                    <code class="language-javascript">
 function twoSum(nums, target) {
     let map = new Map();
     for (let i = 0; i < nums.length; i++) {
@@ -40,7 +40,7 @@ function twoSum(nums, target) {
                 <div class="card-content">
                     <p>Given the head of a singly linked list, reverse the list and return its head.</p>
                     <pre>
-                    <code>
+                    <code class="language-javascript">
 function reverseList(head) {
     let prev = null;
     let curr = head;
@@ -68,7 +68,7 @@ function reverseList(head) {
                 <div class="card-content">
                     <p>Given the root of a binary tree, return the level order traversal of its nodes' values.</p>
                     <pre>
-                    <code>
+                    <code class="language-javascript">
 function levelOrder(root) {
     if (!root) return [];
     let result = [];
@@ -107,4 +107,6 @@ function levelOrder(root) {
     }
 
     solutionContent.innerHTML = solutionText;
+
+    Prism.highlightAll();
 }

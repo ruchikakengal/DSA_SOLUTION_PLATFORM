@@ -1,37 +1,72 @@
-<h1 align="center" id="title">DSA solution Hub</h1>
+<h1 align="center">DSA Solution Platform</h1>
 
-<p id="description">This project is a collaborative platform to host and share solutions for common Data Structures and Algorithms (DSA) problems. Whether you're practicing for coding interviews contributing to open source or just aiming to brush up on DSA concepts this hub provides a well-organized accessible collection of solutions.</p>
+The **DSA Solution Platform** is an open-source project designed to help users practice, submit, and review problems in **Data Structures and Algorithms (DSA)**. It aims to enhance problem-solving skills through an interactive and feature-rich environment for students and developers.
 
-<h2>🚀 Demo</h2>
+---
 
-[https://priyeshsingh24.github.io/DSA\_SOLUTION\_PLATFORM/](https://priyeshsingh24.github.io/DSA_SOLUTION_PLATFORM/)
+## ✨ Features
 
+- **User Authentication**:  
+  Register, log in, and manage your profile seamlessly.
   
-  
-<h2>🧐 Features</h2>
+- **Categorized Problems**:  
+  Explore problems organized into categories like Arrays, Linked Lists, Trees, Graphs, and Dynamic Programming.
 
-Here're some of the project's best features:
+- **Multi-Language Solution Submissions**:  
+  Submit your solutions in popular programming languages such as C++, Python, and Java.
 
-<h2>🛠️ Installation Steps:</h2>
+- **Integrated Code Execution**:  
+  Test your solutions within the platform using a built-in, secure execution environment.
 
-<p>1. - A web browser (latest version recommended)</p>
+- **Leaderboard**:  
+  Track your performance and see how you rank among other users globally.
 
-<p>2. - Basic knowledge of Git and GitHub</p>
+- **Discussion Forum**:  
+  Collaborate and discuss problem-solving approaches with the community.
 
-<p>3. Clone the repository:</p>
+- **Hints & Official Solutions**:  
+  Access hints and detailed solutions to tackle challenging problems.
 
-```
-git clone https://github.com/PRIYESHSINGH24/DSA_SOLUTION_PLATFORM
-```
+- **Search Functionality**:  
+  Quickly find problems by name, category, or keyword.
 
-<p>4. Open index.html in your browser to run locally</p>
+---
 
-  
-  
-<h2>💻 Built with</h2>
+## 🛠 Tech Stack
 
-Technologies used in the project:
+### Frontend
+- **HTML**, **CSS**, **JavaScript** (React/Next.js)
 
-*   HTML
-*   CSS
-*   JAVASCRIPT
+### Backend
+- **Node.js**, **Express**
+
+### Database
+- **MongoDB** / **PostgreSQL**
+
+### Code Execution
+- **Docker**: Provides a sandboxed environment for secure code execution.
+
+### Authentication
+- **JWT (JSON Web Tokens)**: Ensures secure and reliable user authentication.
+
+---
+
+## 🚀 Installation Guide
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/username/dsa-solution-platform.git
+   cd dsa-solution-platform
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+3. **Start the development server**
+   ```
+      npm run dev
+   ```
+4. **Access the platform**
+   Open your browser and navigate to http://localhost:3000 on your Browser
+   

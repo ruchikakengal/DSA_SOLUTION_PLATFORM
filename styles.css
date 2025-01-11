@@ -29,7 +29,7 @@ body {
 
 .logo img {
   height: 40px;
-  width: auto;
+  width: 5rem;
   transition: transform 0.3s ease;
 }
 
@@ -37,6 +37,9 @@ body {
   transform: scale(1.05);
 }
 
+.logo{
+  padding-top: 8px;
+}
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -47,6 +50,14 @@ body {
 
 .nav-links li {
   position: relative;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 18px;
 }
 
 .nav-links a {
@@ -141,10 +152,7 @@ body {
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .navbar {
-      background: rgba(17, 24, 39, 0.95);
-  }
-
+  
   .nav-links a {
       color: #e5e7eb;
   }
@@ -195,7 +203,7 @@ html {
 }
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: #333;
   color: #fff;
   width: 100%;

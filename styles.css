@@ -6,6 +6,82 @@ body {
   background-color: #f4f4f4;
   /* overflow-y: hidden; */
 }
+/* Basic reset for some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+.navbar .logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Makes the logo circular */
+  overflow: hidden;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Additional transitions for better UI feedback */
+.navbar .logo img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/* Navbar Styles */
+.navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #28a745; /* Green background */
+  padding: 10px 15px;
+  color: white;
+}
+
+/* Logo Styling */
+.navbar .logo img {
+  width: 100px;
+}
+
+/* Navigation menu */
+.nav-links {
+  font-weight: bold; /* Apply bold to the navbar text */
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* Space between menu items */
+}
+
+/* Navigation links */
+.nav-links li a {
+  color: rgb(87, 57, 13);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+/* Hover effects for navigation links */
+.nav-links li a:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    text-align: center;
+  }
+}
+
 .content-wrapper {
   height: 100%;
   width: 100%;

@@ -29,7 +29,7 @@ body {
 
 .logo img {
   height: 40px;
-  width: auto;
+  width: 5rem;
   transition: transform 0.3s ease;
 }
 
@@ -37,6 +37,9 @@ body {
   transform: scale(1.05);
 }
 
+.logo{
+  padding-top: 8px;
+}
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -47,6 +50,14 @@ body {
 
 .nav-links li {
   position: relative;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 18px;
 }
 
 .nav-links a {
@@ -96,6 +107,25 @@ body {
   cursor: pointer;
 }
 
+.footer-title{
+  margin: 40px; text-align: justify;
+}
+
+.footer-logo{
+  width: 100px;
+        margin-top: 40px;
+}
+
+.follow-us{
+  font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;
+}
+
+.services{
+flex: 1; 
+       min-width: 150px;
+        margin: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
@@ -141,10 +171,7 @@ body {
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .navbar {
-      background: rgba(17, 24, 39, 0.95);
-  }
-
+  
   .nav-links a {
       color: #e5e7eb;
   }
@@ -187,6 +214,15 @@ html {
   .nav-links li a {
     text-align: center;
   }
+
+  .social-icons{
+    display: flex;justify-content: center;
+    align-items: center;
+  }
+
+  .follow-us{
+    text-align: center;
+  }
 }
 
 .content-wrapper {
@@ -195,7 +231,7 @@ html {
 }
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: #333;
   color: #fff;
   width: 100%;
@@ -308,7 +344,10 @@ footer {
 }
 
 .footer-section {
-  margin: 20px;
+  flex: 1; min-width: 150px; margin: 10px;
+}
+.about{
+  flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;
 }
 
 .footer-section h2 {
@@ -406,4 +445,44 @@ footer {
   font-size: 14px;
   position: relative;
   bottom: 0;
+}
+
+@media(max-width:1025px) {
+  .footer-section p {
+    margin: 12px
+  }
+
+  .footer-logo{
+    width: 65px;
+    margin-top: 17px;
+  }
+}
+
+@media (max-width:426px) {
+  .services{
+    margin-left: 34px;
+  }
+}
+
+@media (max-width:376px) {
+  .services{
+  text-align: center;
+  margin-bottom: 0;
+  }
+
+  .learn-more{
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 321px) {
+  .footer-section{
+    width: 290px;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    color: white;
+  }
 }

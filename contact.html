@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo img {
+      width: 120px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #11971f;
+    }
+
+    .content-wrapper {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-section h1 {
+      font-size: 2.5rem;
+      color: #1fb40e;
+      margin-bottom: 15px;
+    }
+
+    .contact-section p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #15ce46;
+      box-shadow: 0 0 5px rgba(28, 207, 49, 0.5);
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-section button {
+      background: linear-gradient(90deg, #2ba33d, #37cc2f);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-section button:hover {
+      background: linear-gradient(90deg, #21ba29, #2c992e);
+      transform: scale(1.05);
+    }
+    #popup-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s, opacity 0.5s;
+  z-index: 1000;
+}
+
+#popup-message.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#popup-message.hidden {
+  transform: scale(0);
+  opacity: 0;
+}
+
+
+    footer {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #e0e0e0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer-section img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #239d21;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+</style>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./img/logo2.png" alt="Logo" />
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#platforms">Platforms</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p>Have questions or need assistance? Reach out to us using the form below.</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <div id="popup-message" class="hidden">Your message has been sent successfully!</div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+      <div class="footer-section about"
+        style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="img/logo2.png" alt="DSA Problem Solutions" style="width: 100px;
+        margin-top: 40px;">
+
+        <p style="margin: 40px; text-align: justify;">DSA problem solutions involve step-by-step methods to solve data structure and algorithm
+          challenges efficiently. They include understanding the problem, selecting the right approach, implementing
+          optimized code, and analyzing time and space complexity for performance.</p>
+      </div>
+
+      <div class="footer-section services" style="flex: 1; 
+       min-width: 150px;
+        margin: 10px;">
+        <h2 style="font-size: 18px;
+         margin-bottom: 10px; 
+         transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">
+          DSA Problem Solutions</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-section learn-more" style="flex: 1; min-width: 150px; margin: 10px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+          onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">Learn More</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="privacy.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Privacy Policy</a></li>
+          <li><a href="Security.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Security</a></li>
+          <li><a href="terms.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Terms of Service</a></li>
+              <li><a href="contributors.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Our Contributors</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section social-links" style="flex: 1; min-width: 150px; margin: 10px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+          onmouseover="this.style.color='green'" onmouseout="this.style.color='black'">Follow Us</h2>
+        <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 10px;">
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                class="fab fa-instagram"></i></a></li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li><a href="#" style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+              onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="padding: 10px; text-align: center; background-color: white;">
+      <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='green'"
+        onmouseout="this.style.color='black'"> <b>&copy;2025 DSA Problem Solutions. All rights reserved.</b></p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const popupMessage = document.getElementById('popup-message');
+  
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+  
+      // Show the popup message
+      popupMessage.classList.remove('hidden');
+      popupMessage.classList.add('show');
+  
+      // Hide the popup after 3 seconds
+      setTimeout(() => {
+        popupMessage.classList.remove('show');
+        popupMessage.classList.add('hidden');
+      }, 3000);
+  
+      // Reset the form
+      form.reset();
+    });
+  </script>
+  
+</body>
+
+</html>
+
+
+
+
+

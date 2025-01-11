@@ -1,71 +1,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  /* overflow-y: hidden; */
-}
-/* Basic reset for some default styles */
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4;
 }
-.navbar .logo img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%; /* Makes the logo circular */
-  overflow: hidden;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Additional transitions for better UI feedback */
-.navbar .logo img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
 /* Navbar Styles */
 .navbar {
-  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #28a745; /* Green background */
-  padding: 10px 15px;
-  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
-/* Logo Styling */
-.navbar .logo img {
-  width: 100px;
-}
-
-/* Navigation menu */
-.nav-links {
-  font-weight: bold; /* Apply bold to the navbar text */
+.logo {
   display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* Space between menu items */
 }
 
-/* Navigation links */
-.nav-links li a {
-  color: rgb(87, 57, 13);
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #333;
   text-decoration: none;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease-in-out;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
-/* Hover effects for navigation links */
-.nav-links li a:hover {
-  background-color: #218838; /* Darker green on hover */
+.nav-links a:hover {
+  color: #007bff;
 }
 
+/* Underline animation for nav links */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.nav-links a.active {
+  color: #007bff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Mobile menu button - Hidden by default */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem;
+  }
+
+  .mobile-menu-btn {
+      display: block;
+  }
+
+  .nav-links {
+      display: none; /* Hide by default on mobile */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-links a {
+      display: block;
+      padding: 0.75rem 0;
+  }
+
+  .nav-links a::after {
+      display: none; /* Remove hover animation on mobile */
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+      background: rgba(17, 24, 39, 0.95);
+  }
+
+  .nav-links a {
+      color: #e5e7eb;
+  }
+
+  .nav-links a:hover {
+      color: #60a5fa;
+  }
+
+  .nav-links a::after {
+      background-color: #60a5fa;
+  }
+
+  @media (max-width: 768px) {
+      .nav-links {
+          background: rgba(17, 24, 39, 0.98);
+      }
+  }
+}
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Adjust for fixed header when scrolling to anchor links */
+:target {
+  scroll-margin-top: 80px;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .nav-links {

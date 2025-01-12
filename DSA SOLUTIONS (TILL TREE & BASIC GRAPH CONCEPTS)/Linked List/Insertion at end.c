@@ -13,6 +13,21 @@ Node* createNode(int data) {
     return new_node;
 }
 
+void insertAtTail(Node** head, int val) {
+    Node* new_node = createNode(val);
+
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
+
+    Node* temp = *head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    temp->next = new_node;
+}
+
 void insertAtHead(Node** head, int val) {
     Node* new_node = createNode(val);
     new_node->next = *head;
@@ -31,9 +46,11 @@ void display(Node* head) {
 int main() {
     Node* head = NULL;
 
-    insertAtHead(&head, 2);
-    display(head);
     insertAtHead(&head, 1);
+    display(head);
+
+    // Insertion at end
+    insertAtTail(&head, 2);
     display(head);
 
     Node* temp;

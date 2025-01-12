@@ -79,12 +79,6 @@ Before setting up the platform locally, ensure you have the following installed:
 
 
 
-### Step-by-Step Setup
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/username/dsa-solution-platform.git
-   cd dsa-solution-platform
 
 
 ---

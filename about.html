@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - DSA Problem Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .about-hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about-hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s;
+        }
+
+        .mission-section {
+            padding: 90px 20px 0px 20px;
+            background: #f8f9fa;
+        }
+
+        .mission-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mission-card i {
+            font-size: 2.5em;
+            color: #2a5298;
+            margin-bottom: 20px;
+        }
+
+        .team-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .values-section {
+            padding: 50px 20px;
+        }
+
+        .values-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        /* Color combinations for each card */
+        .value-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+        }
+
+        .value-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #A8E6CF, #3498DB);
+        }
+
+        .value-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #FFD93D, #FF6B6B);
+        }
+
+        .value-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #6C5CE7, #a8e6cf);
+        }
+
+        .value-card i {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Matching icons colors with their respective gradients */
+        .value-card:nth-child(1) i {
+            color: #FF6B6B;
+        }
+
+        .value-card:nth-child(2) i {
+            color: #3498DB;
+        }
+
+        .value-card:nth-child(3) i {
+            color: #FFD93D;
+        }
+
+        .value-card:nth-child(4) i {
+            color: #6C5CE7;
+        }
+
+        .value-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-card:hover i {
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2em;
+            }
+
+            .about-hero p {
+                font-size: 1em;
+            }
+
+            .mission-container,
+            .values-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5em;
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-heading h2::after {
+            content: '';
+            position: absolute;
+            left: 40%;
+            bottom: 5px;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #315baa, #27bbbb, #315baa);
+            transition: width 0.3s ease;
+        }
+
+        .section-heading h2:hover::after {
+            width: 20%;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .heading-underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .section-heading h2 {
+                font-size: 2em;
+            }
+
+            .section-heading p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo2.png" alt="Logo" />
+        </div>
+        <button class="mobile-menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#platforms">Platforms</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-hero">
+        <h1>About DSA Solution Platform</h1>
+        <p>Empowering developers to master Data Structures and Algorithms through comprehensive solutions and
+            collaborative learning.</p>
+    </section>
+
+    <section class="mission-section">
+        <div class="mission-container">
+            <div class="mission-card" data-tilt>
+                <i class="fas fa-bullseye"></i>
+                <h2>Our Mission</h2>
+                <p>To provide accessible, high-quality DSA learning resources that help developers enhance their
+                    problem-solving skills and advance their careers.</p>
+            </div>
+            <div class="mission-card" data-tilt>
+                <i class="fas fa-eye"></i>
+                <h2>Our Vision</h2>
+                <p>To become the world's leading platform for DSA education, fostering a community of skilled problem
+                    solvers and innovative thinkers.</p>
+            </div>
+            <div class="mission-card" data-tilt>
+                <i class="fas fa-users"></i>
+                <h2>Our Community</h2>
+                <p>A diverse, inclusive community of learners and experts sharing knowledge and supporting each other's
+                    growth in DSA mastery.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="section-heading">
+            <h2>Our Core Values</h2>
+            <p>The principles that guide our mission to provide excellent DSA education</p>
+            <div class="heading-underline"></div>
+        </div>
+        <div class="values-container">
+            <div class="value-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Quality Education</h3>
+                <p>Providing comprehensive, well-explained solutions to DSA problems.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Collaboration</h3>
+                <p>Fostering a supportive environment for learning and growth.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Innovation</h3>
+                <p>Continuously improving our platform and teaching methods.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-universal-access"></i>
+                <h3>Accessibility</h3>
+                <p>Making DSA education available to everyone, everywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content"
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+            <div class="footer-section about #footer-section" onmouseover="this.style.transform='scale(1.02)'"
+                onmouseout="this.style.transform='scale(1)'">
+                <img src="img/logo2.png" alt="DSA Problem Solutions" class="footer-logo">
+
+                <p class="footer-title">DSA problem solutions involve step-by-step methods to solve data structure and
+                    algorithm
+                    challenges efficiently. They include understanding the problem, selecting the right approach,
+                    implementing
+                    optimized code, and analyzing time and space complexity for performance.</p>
+            </div>
+
+            <div class="footer-section services">
+                <h2 style="font-size: 18px;
+             margin-bottom: 10px; 
+             transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'"
+                    onmouseout="this.style.color='black'">
+                    DSA Problem Solutions</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="about.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
+                    <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+                    <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
+                    <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a>
+                    </li>
+                    <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-section learn-more">
+                <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+                    onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">Learn More</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="privacy.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Privacy Policy</a></li>
+                    <li><a href="Security.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Security</a></li>
+                    <li><a href="terms.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Terms of Service</a></li>
+                    <li><a href="contributors.html"
+                            style="color: black; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+                            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Our Contributors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social-links" style="flex: 1; min-width: 150px; margin: 18px;">
+                <h2 class="follow-us" onmouseover="this.style.color='green'" onmouseout="this.style.color='black'">
+                    Follow Us</h2>
+                <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 10px;">
+                    <li><a href="#"
+                            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+                            onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"
+                            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+                            onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                                class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#"
+                            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+                            onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                                class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="#"
+                            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+                            onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li><a href="#"
+                            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+                            onmouseover="this.style.color='green'; this.style.transform='scale(1.2)'; this.style.display='inline-block'"
+                            onmouseout="this.style.color='black'; this.style.transform='scale(1)'"><i
+                                class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="padding: 10px; text-align: center; background-color: white;">
+            <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='green'"
+                onmouseout="this.style.color='black'"> <b>&copy;2025 DSA Problem Solutions. All rights reserved.</b></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        // Initialize tilt effect on mission cards
+        VanillaTilt.init(document.querySelectorAll(".mission-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

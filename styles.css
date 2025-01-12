@@ -53,7 +53,7 @@ body {
 }
 
 .nav-links li a {
-  color: #000;
+  /* color: #000; */
   text-decoration: none;
   padding: 8px 12px;
   transition: background-color 0.3s ease-in-out;

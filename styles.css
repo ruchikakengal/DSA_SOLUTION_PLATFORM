@@ -448,6 +448,21 @@ footer {
   color: #6c757d;
 }
 
+.footer-section.newsletter {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  border-radius: 20px; /* Makes all corners rounded */
+  backdrop-filter: blur(10px); /* Creates the glass effect with a blur */
+  padding: 20px; /* Adds spacing inside the section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover animations */
+}
+
+.footer-section.newsletter:hover {
+  transform: translateY(-5px); /* Moves the section slightly up on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+
 .footer-section.newsletter h2 {
   font-size: 22px;
   color: #ea0202;
@@ -544,4 +559,135 @@ footer {
   .nav-links li a {
     color: white;
   }
+}
+
+/* Footer Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Footer Styling */
+footer {
+  background: #28a745;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  border-top-left-radius: 50px; /* Adds a round edge to the top-left */
+  border-top-right-radius: 50px; /* Adds a round edge to the top-right */
+
+}
+
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #f8f9fa;
+}
+
+footer p, footer ul li {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #6c757d;
+}
+
+/* Logo Section */
+.footer-logo h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Newsletter Form */
+footer form {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+footer form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #6c757d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer form button:hover {
+  background-color: #495057;
+}
+
+/* Social Links */
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links ul li a {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-links ul li a:hover {
+  color: #8cc152;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 14px;
 }

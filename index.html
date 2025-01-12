@@ -84,24 +84,28 @@
     <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
   </div>
 
-<footer style="background: #28a745; color: #ffffff; padding: 40px 20px; font-family: 'Arial', sans-serif;">
-  <!-- Footer Content -->
-  <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; max-width: 1200px; margin: 0 auto;">
+<footer style="background: #28a745; color: #ffffff; padding: 40px 20px; font-family: 'Arial', sans-serif; overflow: hidden;">
+  <!-- Footer Container -->
+  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px;">
     
-    <!-- About Section -->
-    <div class="footer-section about" style="flex: 1; min-width: 250px; text-align: center;">
+    <!-- Left Section (Logo and Description) -->
+    <div class="footer-left" style="flex: 2; min-width: 300px;">
       <!-- Logo -->
-      <div style="background-color: #8cc152; padding: 20px; border-radius: 8px; display: inline-block;">
-        <h1 style="margin: 0; font-size: 36px; font-weight: bold;">DSA</h1>
+      <div class="footer-logo" style="margin-bottom: 20px; animation: fadeInLeft 1s;">
+        <div style="background-color: #8cc152; padding: 20px; border-radius: 8px; display: inline-block;">
+          <h1 style="margin: 0; font-size: 36px; font-weight: bold;">DSA</h1>
+        </div>
       </div>
       <!-- Description -->
-      <p style="font-size: 16px; line-height: 1.6; margin-top: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">
-        DSA problem solutions involve step-by-step methods to solve data structure and algorithm challenges efficiently. They include understanding the problem, selecting the right approach, implementing optimized code, and analyzing time and space complexity for performance.
+      <p style="font-size: 16px; line-height: 1.6; animation: fadeInLeft 1.5s;">
+        DSA problem solutions involve step-by-step methods to solve data structure and algorithm challenges efficiently. 
+        They include understanding the problem, selecting the right approach, implementing optimized code, and analyzing 
+        time and space complexity for performance.
       </p>
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-section quick-links" style="flex: 1; min-width: 200px;">
+    <!-- Quick Links Section -->
+    <div class="footer-quick-links" style="flex: 1; min-width: 200px; animation: fadeIn 1s;">
       <h3 style="font-size: 18px; margin-bottom: 20px; color: #f8f9fa;">Quick Links</h3>
       <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 1.8;">
         <li><a href="#" style="text-decoration: none; color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#6c757d';" onmouseout="this.style.color='#ffffff';">Who We Are</a></li>
@@ -112,8 +116,8 @@
       </ul>
     </div>
 
-    <!-- Learn More -->
-    <div class="footer-section learn-more" style="flex: 1; min-width: 200px;">
+    <!-- Learn More Section -->
+    <div class="footer-learn-more" style="flex: 1; min-width: 200px; animation: fadeIn 1.5s;">
       <h3 style="font-size: 18px; margin-bottom: 20px; color: #f8f9fa;">Learn More</h3>
       <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 1.8;">
         <li><a href="privacy.html" style="text-decoration: none; color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#6c757d';" onmouseout="this.style.color='#ffffff';">Privacy Policy</a></li>
@@ -122,24 +126,24 @@
         <li><a href="contributors.html" style="text-decoration: none; color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#6c757d';" onmouseout="this.style.color='#ffffff';">Our Contributors</a></li>
       </ul>
     </div>
+  </div>
 
-    <!-- Newsletter Signup -->
-    <div class="footer-section newsletter" style="flex: 1; min-width: 300px;">
-      <h3 style="font-size: 18px; margin-bottom: 20px; color: #f8f9fa;">Stay Updated</h3>
-      <p style="font-size: 14px; line-height: 1.8; margin-bottom: 20px;">
-        Subscribe to our newsletter for the latest updates and tips on mastering data structures and algorithms.
-      </p>
-      <form action="#" method="POST" style="display: flex; gap: 10px;">
-        <input type="email" placeholder="Your Email Address" required style="flex: 1; padding: 10px; font-size: 14px; border: 1px solid #dee2e6; border-radius: 4px;">
-        <button type="submit" style="padding: 10px 20px; font-size: 14px; background-color: #6c757d; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">
-          Subscribe
-        </button>
-      </form>
-    </div>
+  <!-- Stay Updated Section -->
+  <div class="footer-newsletter" style="background-color: #206d40; padding: 20px; margin-top: 40px; animation: fadeInUp 2s;">
+    <h3 style="font-size: 18px; margin-bottom: 20px; text-align: center; color: #ffffff;">Stay Updated</h3>
+    <p style="text-align: center; font-size: 14px; line-height: 1.8; margin-bottom: 20px;">
+      Subscribe to our newsletter for the latest updates and tips on mastering data structures and algorithms.
+    </p>
+    <form action="#" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; gap: 10px;">
+      <input type="email" placeholder="Your Email Address" required style="flex: 1; padding: 10px; font-size: 14px; border: 1px solid #dee2e6; border-radius: 4px;">
+      <button type="submit" style="padding: 10px 20px; font-size: 14px; background-color: #6c757d; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">
+        Subscribe
+      </button>
+    </form>
   </div>
 
   <!-- Social Links -->
-  <div class="social-links" style="text-align: center; margin-top: 40px;">
+  <div class="social-links" style="text-align: center; margin-top: 40px; animation: fadeInUp 2.5s;">
     <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
       <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-facebook"></i></a></li>
       <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-twitter"></i></a></li>
@@ -149,10 +153,29 @@
   </div>
 
   <!-- Footer Bottom -->
-  <div class="footer-bottom" style="text-align: center; margin-top: 40px; padding-top: 20px; background: none; color: #ffffff;">
+  <div class="footer-bottom" style="text-align: center; margin-top: 20px; padding-top: 20px; background: none; color: #ffffff; animation: fadeInUp 3s;">
     <p style="margin: 0; font-size: 14px;">&copy; 2025 DSA Problem Solutions. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Animations -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
 
 
 

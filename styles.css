@@ -107,6 +107,82 @@ body {
   cursor: pointer;
 }
 
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #11cb2a, #19be50);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+
+.platform-btn {
+  background-color: #fff;
+  color: #2575fc;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.platform-btn:hover {
+  transform: scale(1.1);
+  background-color: #6a11cb;
+  color: #fff;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.footer-title{
+  margin: 40px; text-align: justify;
+}
+
+.footer-logo{
+  width: 100px;
+        margin-top: 40px;
+}
+
+.follow-us{
+  font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;
+}
+
+.services{
+flex: 1; 
+       min-width: 150px;
+        margin: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
@@ -172,12 +248,12 @@ body {
   }
 }
 
-/* Add smooth scroll behavior */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Adjust for fixed header when scrolling to anchor links */
+
 :target {
   scroll-margin-top: 80px;
 }
@@ -195,6 +271,15 @@ html {
   .nav-links li a {
     text-align: center;
   }
+
+  .social-icons{
+    display: flex;justify-content: center;
+    align-items: center;
+  }
+
+  .follow-us{
+    text-align: center;
+  }
 }
 
 .content-wrapper {
@@ -208,7 +293,7 @@ header {
   color: #fff;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; /* Ensure it spans the full width */
+  margin: 0; 
 }
 header h1 {
   margin: 0;
@@ -230,30 +315,30 @@ header p {
 
 .platform-card {
   background-color: #fff;
-  border-radius: 16px; /* Larger rounded corners */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  border-radius: 16px; 
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); 
   margin: 10px;
-  padding: 30px; /* Increased padding */
+  padding: 30px; 
   text-align: center;
-  flex: 1 1 calc(33.33% - 40px); /* Flexible width for responsiveness */
-  max-width: 350px; /* Larger card size */
+  flex: 1 1 calc(33.33% - 40px);
+  max-width: 350px; 
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .platform-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2); 
 }
 
 .platform-card img {
-  width: 100px; /* Larger image size */
-  height: 100px; /* Consistent height */
+  width: 100px; 
+  height: 100px; 
   margin-bottom: 15px;
-  object-fit: contain; /* Ensure images are scaled proportionally */
-  border-radius: 10px; /* Rounded images */
-  border: none; /* Ensure no borders */
-  outline: none; /* Prevent any outlines */
-  box-shadow: none; /* Remove any shadows */
+  object-fit: contain; 
+  border-radius: 10px; 
+  border: none; 
+  outline: none;
+  box-shadow: none; 
 }
 
 .platform-card h2 {
@@ -265,17 +350,19 @@ header p {
 .platform-card a {
   display: inline-block;
   margin-top: 15px;
-  padding: 12px 25px; /* Slightly larger buttons */
+  padding: 12px 25px;
   background-color: #2acb1e;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px; /* Rounded button corners */
+  border-radius: 8px; 
   transition: background-color 0.3s;
 }
 
 .platform-card a:hover {
   background-color: #555;
 }
+
+
 /* Scroll to Top Button */
 #scrollToTopBtn {
   display: none;
@@ -316,7 +403,10 @@ footer {
 }
 
 .footer-section {
-  margin: 20px;
+  flex: 1; min-width: 150px; margin: 10px;
+}
+.about{
+  flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;
 }
 
 .footer-section h2 {
@@ -387,12 +477,12 @@ footer {
 }
 
 .footer-section.newsletter .newsletter-form input:focus {
-  border-color: #ff5722; /* Focused border color */
+  border-color: #ff5722;
   outline: none;
 }
 
 .footer-section.newsletter .subscribe-btn {
-  background: linear-gradient(90deg, #ff5722, #ff0000); /* Red gradient */
+  background: linear-gradient(90deg, #ff5722, #ff0000); 
   color: #fff;
   padding: 10px 20px;
   font-size: 14px;
@@ -403,8 +493,8 @@ footer {
 }
 
 .footer-section.newsletter .subscribe-btn:hover {
-  background: linear-gradient(90deg, #ff0000, #ff5722); /* Reverse gradient on hover */
-  transform: translateY(-3px); /* Button hover animation */
+  background: linear-gradient(90deg, #ff0000, #ff5722); 
+  transform: translateY(-3px); 
 }
 
 .footer-bottom {
@@ -414,4 +504,44 @@ footer {
   font-size: 14px;
   position: relative;
   bottom: 0;
+}
+
+@media(max-width:1025px) {
+  .footer-section p {
+    margin: 12px
+  }
+
+  .footer-logo{
+    width: 65px;
+    margin-top: 17px;
+  }
+}
+
+@media (max-width:426px) {
+  .services{
+    margin-left: 34px;
+  }
+}
+
+@media (max-width:376px) {
+  .services{
+  text-align: center;
+  margin-bottom: 0;
+  }
+
+  .learn-more{
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 321px) {
+  .footer-section{
+    width: 290px;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    color: white;
+  }
 }

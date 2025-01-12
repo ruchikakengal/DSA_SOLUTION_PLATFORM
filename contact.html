@@ -379,6 +379,91 @@
       transition: transform 0.3s ease-in-out;
 
     }
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./img/logo2.png" alt="Logo" />
+      </div>
+      <button class="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#platforms">Platforms</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-wrapper">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p>Have questions or need assistance? Reach out to us using the form below.</p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <div id="popup-message" class="hidden">Your message has been sent successfully!</div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+      <div class="footer-section about"
+        style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;"
+        onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="img/logo2.png" alt="DSA Problem Solutions" style="width: 100px;
+        margin-top: 40px;">
+
+        <p style="margin: 40px; text-align: justify;">DSA problem solutions involve step-by-step methods to solve data structure and algorithm
+          challenges efficiently. They include understanding the problem, selecting the right approach, implementing
+          optimized code, and analyzing time and space complexity for performance.</p>
+      </div>
+
+      <div class="footer-section services" style="flex: 1; 
+       min-width: 150px;
+        margin: 10px;">
+        <h2 style="font-size: 18px;
+         margin-bottom: 10px; 
+         transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='black'">
+          DSA Problem Solutions</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="about.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Who We Are</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Work With Us</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Investor Relations</a></li>
+          <li><a href="#" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+        </ul>
+      </div>
 
     .DSA-footer-logo{
        width: 100px; margin-top: 40px

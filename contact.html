@@ -209,114 +209,203 @@
     }
 
     .content-wrapper {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
 
-    .contact-section {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        .contact-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
 
-    .contact-section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    }
+        .header-content {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
 
-    .contact-section h1 {
-      font-size: 2.5rem;
-      color: #1fb40e;
-      margin-bottom: 15px;
-    }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #239d21 0%, #04ff00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
 
-    .contact-section p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #555;
-    }
+        .header-content p {
+            color: #64748b;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .form-group {
-      margin-bottom: 15px;
-    }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 600;
-    }
+        .contact-info {
+            background: #f8faff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
+        .contact-info:hover {
+            transform: translateY(-5px);
+        }
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #15ce46;
-      box-shadow: 0 0 5px rgba(28, 207, 49, 0.5);
-      outline: none;
-    }
+        .contact-info i {
+            font-size: 1.5rem;
+            color: #239d21;
+            margin-bottom: 1rem;
+        }
 
-    .form-group textarea {
-      resize: vertical;
-      height: 120px;
-    }
+        .contact-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
 
-    .contact-section button {
-      background: linear-gradient(90deg, #2ba33d, #37cc2f);
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
+        .contact-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
 
-    .contact-section button:hover {
-      background: linear-gradient(90deg, #21ba29, #2c992e);
-      transform: scale(1.05);
-    }
-    #popup-message {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: linear-gradient(to right, #28a745, #218838);
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      font-size: 1rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.5s, opacity 0.5s;
-      z-index: 1000;
-    }
+        #contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
 
-    #popup-message.show {
-      transform: scale(1);
-      opacity: 1;
-    }
+        .form-group {
+            position: relative;
+        }
 
-    #popup-message.show {
-      transform: scale(1);
-      opacity: 1;
-    }
-    #popup-message.hidden {
-      transform: scale(0);
-      opacity: 0;
-    }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: #f8faff;
+            font-size: 1rem;
+            color: #1e293b;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #239d21;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background: linear-gradient(135deg, #239d21 0%, #07ff02 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        #popup-message {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #239d21;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(150%);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #popup-message.show {
+            transform: translateY(0);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Loading animation */
+        .loading {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px 0 0 -10px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 2rem 1rem;
+            }
+
+            .contact-section {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .header-content p {
+                font-size: 1rem;
+            }
+        }
 
     footer {
       background: #fff;
@@ -487,48 +576,66 @@
 
     <main class="content-wrapper">
       <section class="contact-section">
-        <h1>Contact Us</h1>
-        <p>
-          Have questions or need assistance? Reach out to us using the form
-          below.
-        </p>
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
+          <div class="header-content">
+              <h1>Get in Touch</h1>
+              <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
           </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
+
+          <div class="contact-grid">
+              <div class="contact-info">
+                  <i>📍</i>
+                  <h3>Our Location</h3>
+                  <p>123 Business Avenue<br>New York, NY 10001</p>
+              </div>
+              <div class="contact-info">
+                  <i>📧</i>
+                  <h3>Email Us</h3>
+                  <p>contact@example.com<br>support@example.com</p>
+              </div>
+              <div class="contact-info">
+                  <i>📱</i>
+                  <h3>Call Us</h3>
+                  <p>+1 (555) 123-4567<br>Mon - Fri, 9am - 6pm</p>
+              </div>
           </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
+
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                  />
+              </div>
+              <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                  />
+              </div>
+              <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message"
+                      required
+                  ></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+          </form>
       </section>
       <div id="popup-message" class="hidden">
-        Your message has been sent successfully!
+          Your message has been sent successfully! 🎉
       </div>
-    </main>
+  </main>
 
     <footer>
       <div class="footer-content">
@@ -836,6 +943,34 @@
         // Reset the form
         form.reset();
       });
+      function handleSubmit(event) {
+            event.preventDefault();
+            const button = event.target.querySelector('button');
+            const popup = document.getElementById('popup-message');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.textContent = 'Sending...';
+
+            // Simulate form submission
+            setTimeout(() => {
+                button.classList.remove('loading');
+                button.textContent = 'Send Message';
+                
+                // Show success message
+                popup.classList.remove('hidden');
+                popup.classList.add('show');
+                
+                // Reset form
+                event.target.reset();
+
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    popup.classList.remove('show');
+                    setTimeout(() => popup.classList.add('hidden'), 500);
+                }, 3000);
+            }, 1500);
+        }
     </script>
   </body>
 </html>

@@ -13,15 +13,37 @@ body {
     min-height: 100vh;
 }
 
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: 5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo{
+    padding-top: 8px;
+  }
+
 header {
     background-color: #24292e;
     color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 header h1 {
+    margin-left: 22rem;
     font-size: 2.5rem;
     font-weight: 600;
 }

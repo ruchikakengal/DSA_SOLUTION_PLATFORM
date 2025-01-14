@@ -1,3 +1,19 @@
+const tl2 = gsap.timeline();
+tl2.from(".logo", {
+   y: -30,
+   opacity: 0,
+   duration: 1,
+   delay: 0.5
+})
+
+tl2.from(".nav-links li", {
+   y: -30,
+   opacity: 0,
+   stagger: 0.25,
+   duration: 1
+})
+
+
 var tl = gsap.timeline()
 tl.from("h1", {
    y: -20,
@@ -19,4 +35,5 @@ body.addEventListener("mousemove", function (e) {
    gsap.to(cursor, {
       x: e.x, y: e.y
    })
-}) 
+})
+

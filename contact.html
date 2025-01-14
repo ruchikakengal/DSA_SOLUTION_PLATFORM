@@ -127,7 +127,7 @@
       border: none;
       padding: 0.5rem;
       cursor: pointer;
-      
+
     }
 
     /* Responsive Design */
@@ -175,7 +175,7 @@
 
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
-      
+
 
       .nav-links a {
         color: #0e0f0f;
@@ -193,7 +193,7 @@
       @media (max-width: 768px) {
         .nav-links {
           background: rgba(174, 237, 158, 0.98);
-          
+
         }
       }
     }
@@ -537,12 +537,24 @@
         margin-left: 21%;
       }
     }
+
+    #cursor{
+      height: 20px;
+        width:20px;
+        background-color: rgb(125, 239, 11,0.5);
+        border-radius: 50%;
+        position: fixed;
+        font-size: 7px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
   </style>
 
-  
-
-   
   <body>
+    <div id="cursor"></div>
     <header>
       <nav class="navbar">
         <div class="logo">
@@ -578,6 +590,13 @@
 
     <main class="content-wrapper">
       <section class="contact-section">
+        <div class="header-content">
+          <h1>Get in Touch</h1>
+          <p>
+            We'd love to hear from you! Send us a message and we'll respond as
+            soon as possible.
+          </p>
+        </div>
           <div class="header-content">
               <h1>Get in Touch</h1>
               <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
@@ -606,60 +625,61 @@
     </div>
 </section>
 
-          <div class="contact-grid">
-              <div class="contact-info">
-                  <i>📍</i>
-                  <h3>Our Location</h3>
-                  <p>123 Business Avenue<br>New York, NY 10001</p>
-              </div>
-              <div class="contact-info">
-                  <i>📧</i>
-                  <h3>Email Us</h3>
-                  <p>contact@example.com<br>support@example.com</p>
-              </div>
-              <div class="contact-info">
-                  <i>📱</i>
-                  <h3>Call Us</h3>
-                  <p>+1 (555) 123-4567<br>Mon - Fri, 9am - 6pm</p>
-              </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <i>📍</i>
+            <h3>Our Location</h3>
+            <p>123 Business Avenue<br />New York, NY 10001</p>
           </div>
+          <div class="contact-info">
+            <i>📧</i>
+            <h3>Email Us</h3>
+            <p>contact@example.com<br />support@example.com</p>
+          </div>
+          <div class="contact-info">
+            <i>📱</i>
+            <h3>Call Us</h3>
+            <p>+1 (555) 123-4567<br />Mon - Fri, 9am - 6pm</p>
+          </div>
+        </div>
 
-          <form id="contact-form" onsubmit="handleSubmit(event)">
-              <div class="form-group">
-                  <label for="name">Your Name</label>
-                  <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                      required
-                  />
-              </div>
-              <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Enter your email"
-                      required
-                  />
-              </div>
-              <div class="form-group">
-                  <label for="message">Your Message</label>
-                  <textarea
-                      id="message"
-                      name="message"
-                      placeholder="Enter your message"
-                      required
-                  ></textarea>
-              </div>
-              <button type="submit">Send Message</button>
-          </form>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
       </section>
       <div id="popup-message" class="hidden">
-          Your message has been sent successfully! 🎉
+        Your message has been sent successfully! 🎉
       </div>
+    </main>
       
   </main>
 
@@ -806,33 +826,40 @@
         form.reset();
       });
       function handleSubmit(event) {
-            event.preventDefault();
-            const button = event.target.querySelector('button');
-            const popup = document.getElementById('popup-message');
-            
-            // Add loading state
-            button.classList.add('loading');
-            button.textContent = 'Sending...';
+        event.preventDefault();
+        const button = event.target.querySelector("button");
+        const popup = document.getElementById("popup-message");
 
-            // Simulate form submission
-            setTimeout(() => {
-                button.classList.remove('loading');
-                button.textContent = 'Send Message';
-                
-                // Show success message
-                popup.classList.remove('hidden');
-                popup.classList.add('show');
-                
-                // Reset form
-                event.target.reset();
+        // Add loading state
+        button.classList.add("loading");
+        button.textContent = "Sending...";
 
-                // Hide success message after 3 seconds
-                setTimeout(() => {
-                    popup.classList.remove('show');
-                    setTimeout(() => popup.classList.add('hidden'), 500);
-                }, 3000);
-            }, 1500);
-        }
+        // Simulate form submission
+        setTimeout(() => {
+          button.classList.remove("loading");
+          button.textContent = "Send Message";
+
+          // Show success message
+          popup.classList.remove("hidden");
+          popup.classList.add("show");
+
+          // Reset form
+          event.target.reset();
+
+          // Hide success message after 3 seconds
+          setTimeout(() => {
+            popup.classList.remove("show");
+            setTimeout(() => popup.classList.add("hidden"), 500);
+          }, 3000);
+        }, 1500);
+      }
     </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 function handleViewSolution(problemTitle) {
     const solutionContent = document.getElementById('solution-content');
-    
+
     let solutionText = "";
 
-    
+
     if (problemTitle === "Two Sum") {
         solutionText = `
             <div class="card">
@@ -114,3 +114,14 @@ function handleViewSolution(problemTitle) {
 }`);
     }
 }
+
+
+const cursor = document.querySelector("#cursor");
+const body = document.querySelector("body");
+
+body.addEventListener("mousemove", function (e) {
+    gsap.to(cursor, {
+        x: e.x,
+        y: e.y
+    })
+})

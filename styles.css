@@ -284,6 +284,8 @@ html {
   width: 100%;
 }
 header {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 40px 0;
   background-color: #333;
@@ -687,4 +689,18 @@ footer form button:hover {
   margin-top: 20px;
   padding-top: 20px;
   font-size: 14px;
+}
+
+#cursor{
+  height: 20px;
+    width:20px;
+    background-color: rgb(125, 239, 11,0.5);
+    border-radius: 50%;
+    position: fixed;
+    font-size: 7px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }

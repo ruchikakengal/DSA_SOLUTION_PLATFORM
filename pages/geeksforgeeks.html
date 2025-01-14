@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="geekforgeek.css">
 </head>
 <body>
+  
     <header>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo2.png" alt="Logo" />
+          </a>
         <h1>GeeksforGeeks Problems</h1>
     </header>
 
@@ -71,23 +75,23 @@
             <div id="problems-container"></div>
 
             <!-- Form to Add New Question -->
-            <h3 style="margin-top: 20px;">Add a New Question</h3>
-            <form id="add-problem-form">
-                <label for="title">Question Title:</label><br>
-                <input type="text" id="title" name="title" required style="width: 100%; margin-bottom: 10px;"><br>
-
-                <label for="difficulty">Difficulty Level:</label><br>
-                <select id="difficulty" name="difficulty" required style="width: 100%; margin-bottom: 10px;">
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                </select><br>
-
-                <label for="solution">Solution (Code):</label><br>
-                <textarea id="solution" name="solution" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
-
-                <button type="submit" style="padding: 10px 15px;">Add Question</button>
-            </form>
+             <div class="ques-form">
+                 <h3 style="margin-top: 20px;">Add a New Question</h3>
+                 <form id="add-problem-form">
+                     <label for="title">Question Title:</label>
+                     <input type="text" id="title" name="title" required style="width: 100%; margin-bottom: 10px;">     
+                     <label for="difficulty">Difficulty Level:</label>
+                     <select id="difficulty" name="difficulty" required style="width: 100%; margin-bottom: 10px;">
+                         <option value="Easy">Easy</option>
+                         <option value="Medium">Medium</option>
+                         <option value="Hard">Hard</option>
+                     </select>
+                     <label for="solution">Solution (Code):</label>
+                     <textarea id="solution" name="solution" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea>
+     
+                     <button type="submit" style="padding: 10px 15px;">Add Question</button>
+                 </form>
+             </div>
         </div>
 
 

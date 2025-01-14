@@ -46,6 +46,20 @@ function handleViewSolution(problemTitle) {
                 </div>
             </div>
         `;
+    } else if (problemTitle === "ascll Function") {
+        solutionText = `
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">${problemTitle} Solution</h3>
+                </div>
+                <div class="card-content">
+                    <p>ascll Function</p>
+                    <div id="ace-editor-ascll-Function" style="height: 200px;"></div>
+                    <p>Time Complexity: O(n)</p>
+                    <p>Space Complexity: O(n)</p>
+                </div>
+            </div>
+        `;
     } else {
         solutionText = `
             <div class="card">
@@ -112,6 +126,89 @@ function handleViewSolution(problemTitle) {
     }
     return result;
 }`);
+    }  else if (problemTitle === "ascll Function") {
+        var editor = ace.edit("ace-editor-ascll-Function");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+        editor.setValue(`#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node {
+    int data;
+    struct node *next;
+} node;
+
+void createnode(node **head) {
+    int data;
+    node* newnode = (node*)malloc(sizeof(node));
+
+    printf("Enter value: ");
+    scanf("%d", &data);
+    newnode->data = data;
+    newnode->next = NULL;
+
+    if (*head == NULL) {
+        *head = newnode;
+    } else {
+        newnode->next = *head;
+        *head = newnode;
+    }
+}
+
+void ascll(node **head) {
+    if (*head == NULL) {
+        printf("Empty list\n");
+        return;
+    }
+
+    node *p = *head;
+    node *q = NULL;
+    int temp;
+
+    // Bubble sort for linked list (Improved swapping logic)
+    while (p != NULL) {
+        q = p->next;
+        while (q != NULL) {
+            if (p->data > q->data) {
+                // Swap data between p and q
+                temp = p->data;
+                p->data = q->data;
+                q->data = temp;
+            }
+            q = q->next;
+        }
+        p = p->next;
+    }
+}
+
+void printll(node *head) {
+    if (head == NULL) {
+        printf("Empty list\n");
+    } else {
+        while (head != NULL) {
+            printf("%d ", head->data);
+            head = head->next;
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int num = 1;
+    node *head = NULL;
+
+    while (num) {
+        createnode(&head);
+        printf("Want to insert more? Type 1 for yes, 0 for no: ");
+        scanf("%d", &num);
+    }
+
+    ascll(&head);
+    printll(head);
+
+    return 0;
+}
+`);
     }
 }
 

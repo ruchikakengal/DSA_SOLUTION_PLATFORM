@@ -276,3 +276,17 @@ header h1 {
   .logo{
     padding-top: 8px;
   }
+
+  #cursor{
+    height: 20px;
+      width:20px;
+      background-color: rgb(125, 239, 11,0.5);
+      border-radius: 50%;
+      position: fixed;
+      font-size: 7px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+  }

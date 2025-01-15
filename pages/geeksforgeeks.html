@@ -80,7 +80,31 @@
                 <p>Select a problem to view its solution.</p>
             </div>
         </div>
+
+        <!-- progress card -->
+      <div class="progress-card">
+        <h2>Check Your Progress</h2>
+        <label for="username">Enter your LeetCode username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        />
+        <button id="fetchButton" class="button button-primary">
+          Get Progress
+        </button>
+        <div id="stats">
+          <p>✨ Easy: <span id="easy">0</span></p>
+          <p>⚡ Medium: <span id="medium">0</span></p>
+          <p>🔥 Hard: <span id="hard">0</span></p>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Adding question -->
     <div class="container">
         <div class="problems-list">
             <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 20px;">Problems</h2>

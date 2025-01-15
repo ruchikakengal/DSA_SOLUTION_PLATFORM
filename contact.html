@@ -799,9 +799,15 @@
 
   <!-- Footer Bottom -->
   <div class="footer-bottom" style="text-align: center; margin-top: 20px; padding-top: 20px; background: none; color: #ffffff; animation: fadeInUp 3s;">
-    <p style="margin: 0; font-size: 14px;">&copy; 2025 DSA Problem Solutions. All rights reserved.</p>
+    <p style="margin: 0; font-size: 14px;">
+  &copy; <span id="currentYear"></span> DSA Problem Solutions. All rights reserved.
+</p>
   </div>
 </footer>
+    <script>
+  // Get the current year and update the span element
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
     <script>
       document
         .querySelector(".mobile-menu-btn")

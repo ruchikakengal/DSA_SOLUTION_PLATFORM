@@ -154,7 +154,6 @@ void createnode(node **head) {
         *head = newnode;
     }
 }
-
 void ascll(node **head) {
     if (*head == NULL) {
         printf("Empty list\n");
@@ -211,7 +210,6 @@ int main() {
 `);
     }
 }
-
 
 const cursor = document.querySelector("#cursor");
 const body = document.querySelector("body");

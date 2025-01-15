@@ -790,11 +790,15 @@
         "
       >
         <p style="margin: 0; font-size: 14px">
-          &copy; 2025 DSA Problem Solutions. All rights reserved.
-        </p>
+  &copy; <span id="currentYear"></span> DSA Problem Solutions. All rights reserved.
+</p>
       </div>
     </footer>
-
+<script>
+  // Set the current year dynamically
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script>
       // Initialize tilt effect on mission cards

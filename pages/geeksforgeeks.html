@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="geekforgeek.css">
 </head>
 <body>
+  <div id="cursor"></div>
     <header>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo2.png" alt="Logo" />
+          </a>
         <h1>GeeksforGeeks Problems</h1>
     </header>
 
@@ -55,6 +59,19 @@
                     </div>
                 </div>
             </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ascll Function</h3>
+                </div>
+                <div class="card-content">
+                    <p>Difficulty: Easy</p>
+                    <div class="button-container">
+                        <button class="button button-primary" onclick="handleViewSolution('ascll Function')">
+                            <span class="icon">▶</span> View Solution
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="solution-display">
@@ -63,7 +80,31 @@
                 <p>Select a problem to view its solution.</p>
             </div>
         </div>
+
+        <!-- progress card -->
+      <div class="progress-card">
+        <h2>Check Your Progress</h2>
+        <label for="username">Enter your LeetCode username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        />
+        <button id="fetchButton" class="button button-primary">
+          Get Progress
+        </button>
+        <div id="stats">
+          <p>✨ Easy: <span id="easy">0</span></p>
+          <p>⚡ Medium: <span id="medium">0</span></p>
+          <p>🔥 Hard: <span id="hard">0</span></p>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Adding question -->
     <div class="container">
         <div class="problems-list">
             <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 20px;">Problems</h2>
@@ -71,29 +112,34 @@
             <div id="problems-container"></div>
 
             <!-- Form to Add New Question -->
-            <h3 style="margin-top: 20px;">Add a New Question</h3>
-            <form id="add-problem-form">
-                <label for="title">Question Title:</label><br>
-                <input type="text" id="title" name="title" required style="width: 100%; margin-bottom: 10px;"><br>
-
-                <label for="difficulty">Difficulty Level:</label><br>
-                <select id="difficulty" name="difficulty" required style="width: 100%; margin-bottom: 10px;">
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                </select><br>
-
-                <label for="solution">Solution (Code):</label><br>
-                <textarea id="solution" name="solution" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
-
-                <button type="submit" style="padding: 10px 15px;">Add Question</button>
-            </form>
+             <div class="ques-form">
+                 <h3 style="margin-top: 20px;">Add a New Question</h3>
+                 <form id="add-problem-form">
+                     <label for="title">Question Title:</label>
+                     <input type="text" id="title" name="title" required style="width: 100%; margin-bottom: 10px;">     
+                     <label for="difficulty">Difficulty Level:</label>
+                     <select id="difficulty" name="difficulty" required style="width: 100%; margin-bottom: 10px;">
+                         <option value="Easy">Easy</option>
+                         <option value="Medium">Medium</option>
+                         <option value="Hard">Hard</option>
+                     </select>
+                     <label for="solution">Solution (Code):</label>
+                     <textarea id="solution" name="solution" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea>
+     
+                     <button type="submit" style="padding: 10px 15px;">Add Question</button>
+                 </form>
+             </div>
         </div>
 
 
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-
+   <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+   integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ ></script>
     <script src="geekforgeek.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script>

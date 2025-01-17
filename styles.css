@@ -137,7 +137,9 @@ body {
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
+  justify-content:center;
 }
 
 
@@ -759,39 +761,4 @@ footer form button:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     background-color: #eaf3ff;
-}
-
-#scrollButton {
-  position: fixed;
-  bottom: 120px;
-  right: 32px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  z-index: 1000;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-#scrollButton:hover {
-  background-color: #218838;
-  transform: scale(1.1);
-}
-
-#scrollButton i {
-  font-size: 20px;
-}
-
-#scrollButton.show {
-  opacity: 1;
-  visibility: visible;
 }

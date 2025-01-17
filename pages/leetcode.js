@@ -7,7 +7,10 @@ document.getElementById('fetchButton').addEventListener('click', async () => {
     try {
         const response = await fetch(`https://leetcode-stats-api.herokuapp.com/${username}`);
         const data = await response.json();
-        const { easySolved, mediumSolved, hardSolved } = data;
+        // console.log(data);
+        
+        const { easySolved, mediumSolved, hardSolved,ranking } = data;
+        document.getElementById('rank').textContent = ranking;
         document.getElementById('easy').textContent = easySolved;
         document.getElementById('medium').textContent = mediumSolved;
         document.getElementById('hard').textContent = hardSolved;

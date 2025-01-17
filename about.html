@@ -301,7 +301,7 @@
 
     <section class="mission-section">
       <div class="mission-container">
-        <div class="mission-card" data-tilt>
+        <div class="mission-card" data-tilt id="aim-card">
           <i class="fas fa-bullseye"></i>
           <h2>Our Mission</h2>
           <p>
@@ -310,7 +310,7 @@
             careers.
           </p>
         </div>
-        <div class="mission-card" data-tilt>
+        <div class="mission-card" data-tilt id="aim-card">
           <i class="fas fa-eye"></i>
           <h2>Our Vision</h2>
           <p>
@@ -318,7 +318,7 @@
             a community of skilled problem solvers and innovative thinkers.
           </p>
         </div>
-        <div class="mission-card" data-tilt>
+        <div class="mission-card" data-tilt id="aim-card">
           <i class="fas fa-users"></i>
           <h2>Our Community</h2>
           <p>
@@ -754,7 +754,8 @@
               style="color: #ffffff; font-size: 20px; transition: color 0.3s"
               onmouseover="this.style.color='#8cc152';"
               onmouseout="this.style.color='#ffffff';"
-              ><i class="fa-brands fa-x-twitter"></i></a>
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
           </li>
           <li>
             <a
@@ -790,15 +791,31 @@
         "
       >
         <p style="margin: 0; font-size: 14px">
-  &copy; <span id="currentYear"></span> DSA Problem Solutions. All rights reserved.
-</p>
+          &copy; <span id="currentYear"></span> DSA Problem Solutions. All
+          rights reserved.
+        </p>
       </div>
     </footer>
-<script>
-  // Set the current year dynamically
-  document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script>
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="about.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Set the current year dynamically
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script>
       // Initialize tilt effect on mission cards
@@ -816,12 +833,5 @@
           document.querySelector(".nav-links").classList.toggle("active");
         });
     </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="script.js"></script>
   </body>
 </html>

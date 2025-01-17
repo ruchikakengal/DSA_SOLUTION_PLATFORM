@@ -4,4 +4,3 @@ class Solution:
         for i in arr:
             count *= i
         return count
-    

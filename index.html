@@ -22,6 +22,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+     #scrollBtn {
+    position: fixed;
+    bottom: 120px; /* Place closer to the bottom */
+    right: 35px;  /* Place closer to the right */
+    display: none; /* Initially hidden */
+    background-color: #158746;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure visibility above other elements */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollBtn:hover {
+    background-color: #000; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge */
+  </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -42,11 +70,11 @@
     </button>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="platform.html">Platforms</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="pages/Login.html">Log In</a></li>
-      <li><a href="#Signup">Sign Up</a></li>
+      <li><a href="Login1.html">Log In</a></li>
+      <li><a href="Signup2.html">Sign Up</a></li>
     </ul>
   </nav>
 </header>
@@ -57,13 +85,15 @@
 
   <header class="hero-section">
     <div class="hero-content">
-      <h1 class="hero-title">Master DSA Problem Solutions</h1>
-      <p class="hero-subtitle">Your ultimate coding practice zone! Pick your favorite platform and sharpen your skills.</p>
+      <h1 class="hero-title">Smart DSA Hub </h1>
+      <p class="hero-subtitle">Your ultimate coding Notebook! Pick your favorite platform and sharpen your skills.</p>
       <div class="hero-buttons">
-        <button class="platform-btn">LeetCode</button>
-        <button class="platform-btn">HackerRank</button>
-        <button class="platform-btn">Codeforces</button>
-        <button class="platform-btn">GeeksforGeeks</button>
+        <a href="pages/leetcode.html"><button class="platform-btn">LeetCode</button></a>        
+        <a href="pages/hackerrank.html"><button class="platform-btn">HackerRank</button></a> 
+        <a href="#"><button class="platform-btn">Codeforces</button></a> 
+        <a href="pages/geeksforgeeks.html"><button class="platform-btn">GeeksforGeeks</button></a>
+        <a href="pages/codechef3.html"><button class="platform-btn">codechef</button></a>
+        <a href="pages/code360bycn.html"><button class="platform-btn">Code 360 by Coding Ninjas</button></a>
       </div>
     </div>
     <div class="hero-image">
@@ -88,7 +118,7 @@
       <div class="platform-card">
         <img src="img/codechef.png" alt="CodeChef Logo" />
         <h2>CodeChef</h2>
-        <a href="pages/codechef.html">CodeChef</a>
+        <a href="pages/codechef3.html">CodeChef</a>
       </div>
       <div class="platform-card">
         <img src="img/leetcode.png" alt="LeetCode Logo" />
@@ -101,11 +131,22 @@
         <h2>Code 360 by Coding Ninjas</h2>
         <a href="pages/code360bycn.html">Code 360 by Coding Ninjas</a>
       </div>
-    </section>
-    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
-  </div>
 
-<footer style="background: linear-gradient(to right, #11cb2a, #19be50);; color: #ffffff; padding: 40px 20px; font-family: 'Arial', sans-serif; overflow: hidden;">
+      <div class="platform-card">
+        <img src="img/HackerRank.png" alt="Code 360 by CN Logo" />
+        <h2>HackerRank</h2>
+        <a href="pages/hackerrank.html">HackerRank</a>
+      </div>
+
+    </section>
+  </div> 
+
+  <!-- Top scroll button -->
+<button id="scrollBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up fa-lg"></i>
+</button>
+
+<footer style="background: linear-gradient(to right,  #0e2511, #19be50);; color: #ffffff; padding: 40px 20px; font-family: 'Arial', sans-serif; overflow: hidden;">
   <!-- Footer Container -->
   <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px;">
     
@@ -132,44 +173,56 @@
          transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='white'">Quick Links</h2>
       <ul style="list-style: none; padding: 0;">
           <li><a href="about.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Who We Are</a></li>
-          <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
+
+          <li><a href="blog.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
               onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Blog</a></li>
-          <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
+          <li><a href="work.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
               onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+
+
+          <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='black';; this.style.paddingLeft='10px'"
+              onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Blog</a></li>
+          <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
+
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Work With Us</a></li>
           <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Investor Relations</a></li>
           <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Contact Us</a></li>
         </ul>
     </div>
+
+
       <div class="footer-section services" >
         <h2 style="font-size: 18px;
          margin-bottom: 10px; 
          transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='white'">DSA Problem Solutions</h2>
         <ul style="list-style: none; padding: 0;">
           <li><a href="about.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Who We Are</a></li>
           <li><a href="Blog.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Blog</a></li>
           <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Work With Us</a></li>
           <li><a href="#" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Investor Relations</a></li>
           <li><a href="contact.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Contact Us</a></li>
         </ul>
       </div>
+
 
     <!-- Learn More Section -->
      <div class="footer-section services" >
@@ -178,30 +231,31 @@
          transition: color 0.3s ease;" onmouseover="this.style.color='#e67e22'" onmouseout="this.style.color='white'">Learn More</h2>
         <ul style="list-style: none; padding: 0;">
           <li><a href="privacy.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Privacy Policy</a></li>
-          <li><a href="security.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+          <li><a href="Security.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Security</a></li>
           <li><a href="terms.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Terms of Service</a></li>
           <li><a href="contributors.html" style="color: white; text-decoration: none; transition: all 0.3s ease;"
-              onmouseover="this.style.color='green'; this.style.paddingLeft='10px'"
+              onmouseover="this.style.color='black'; this.style.paddingLeft='10px'"
               onmouseout="this.style.color='white'; this.style.paddingLeft='0'">Our Contributors</a></li>
         </ul>
     </div>
   </div>
 
   <!-- Stay Updated Section -->
-  <div class="footer-section.newsletter" style="background: rgba(255, 255, 255, 0.2); border-radius: 20px;  backdrop-filter: blur(10px); padding: 10px;  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  transition: transform 0.3s ease, box-shadow 0.3s ease;">
+  <div class="footer-section.newsletter" style="background: rgba(255, 255, 255, 0.2); border-radius: 20px;  backdrop-filter: blur(10px); padding: 10px;  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  transition: transform 0.3s ease, box-shadow 0.3s ease; height:10rem">
     <h3 style="font-size: 18px; margin-bottom: 20px; text-align: center; color: #ffffff;">Stay Updated</h3>
     <p style="text-align: center; font-size: 14px; line-height: 1.8; margin-bottom: 20px;">
       Subscribe to our newsletter for the latest updates and tips on mastering data structures and algorithms.
     </p>
     <form action="#" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; gap: 10px;">
       <input type="email" placeholder="Your Email Address" required style="flex: 1; padding: 10px; font-size: 14px; border: 1px solid #dee2e6; border-radius: 4px;">
-      <button type="submit" style="padding: 10px 20px; font-size: 14px; background-color: #6c757d; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">
+      <button type="submit" style="padding: 10px 20px; font-size: 14px; background-color: #222; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255,0.8)'; this.style.color= 'black'"
+      onmouseout="this.style.backgroundColor='#222'; this.style.color= 'white'">
         Subscribe
       </button>
     </form>
@@ -210,50 +264,56 @@
   <!-- Social Links -->
   <div class="social-links" style="text-align: center; margin-top: 40px; animation: fadeInUp 2.5s;">
     <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
-      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-facebook"></i></a></li>
-      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fa-brands fa-x-twitter"></i></a></li>
-      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#8cc152';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-youtube"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#13d8ff';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#222';" onmouseout="this.style.color='#ffffff';"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#13d8ff';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#" style="color: #fff; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='#e84a3cee';" onmouseout="this.style.color='#ffffff';"><i class="fab fa-youtube"></i></a></li>
     </ul>
   </div>
 
   <!-- Footer Bottom -->
   <div class="footer-bottom" style="text-align: center; margin-top: 20px; padding-top: 20px; background: none; color: #ffffff; animation: fadeInUp 3s;">
-    <p style="margin: 0; font-size: 14px;">&copy; 2025 DSA Problem Solutions. All rights reserved.</p>
+    <p style="margin: 0; font-size: 14px;">
+  &copy; <span id="currentYear"></span> DSA Problem Solutions. All rights reserved.
+</p>
   </div>
 </footer>
 
-
+<script>
+  // Set the current year dynamically
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="script.js"></script>
   <script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async></script>
   <script src="scrollscript.js"></script>
   <script src="audio.js"></script>
   <script>
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
-    // Get the button element
-    const scrollBtn = document.getElementById('scrollBtn');
+  // Get the button element
+  const scrollBtn = document.getElementById('scrollBtn');
 
-    // Show the button when the user scrolls down 100px from the top
-    window.onscroll = function () {
-      if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+  // Show the button when the user scrolls down 100px from the top
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollBtn.style.display = "block";
-      } else {
+    } else {
         scrollBtn.style.display = "none";
-      }
-    };
+    }
+  };
 
-    // Scroll to the top of the page when the button is clicked
-    scrollBtn.onclick = function () {
-      window.scrollTo({
+  // Scroll to the top of the page when the button is clicked
+  scrollBtn.onclick = function () {
+    window.scrollTo({
         top: 0,
         behavior: "smooth"
-      });
-    };
+    });
+  };
+
+</script>
 
   </script>
 

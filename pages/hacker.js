@@ -1,29 +1,8 @@
-document.getElementById('fetchButton').addEventListener('click', async () => {
-    const username = document.getElementById('username').value.trim();
-    if (!username) {
-        alert('Please enter a LeetCode username!');
-        return;
-    }
-    try {
-        const response = await fetch(`https://leetcode-stats-api.herokuapp.com/${username}`);
-        const data = await response.json();
-        // console.log(data);
-        
-        const { easySolved, mediumSolved, hardSolved,ranking } = data;
-        document.getElementById('rank').textContent = ranking;
-        document.getElementById('easy').textContent = easySolved;
-        document.getElementById('medium').textContent = mediumSolved;
-        document.getElementById('hard').textContent = hardSolved;
-    } catch (error) {
-        console.error('Error fetching user stats', error);
-        alert('Failed to fetch data. Please try again later');
-    }
-});
-
 function handleViewSolution(problemTitle) {
     const solutionContent = document.getElementById('solution-content');
 
     let solutionText = "";
+
 
     if (problemTitle === "Two Sum") {
         solutionText = `
@@ -80,6 +59,7 @@ function handleViewSolution(problemTitle) {
         `;
     }
 
+
     solutionContent.innerHTML = solutionText;
 
 
@@ -135,7 +115,6 @@ function handleViewSolution(problemTitle) {
 }`);
     }
 }
-
 
 const cursor = document.querySelector("#cursor");
 const body = document.querySelector("body");

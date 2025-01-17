@@ -27,6 +27,12 @@ tl.from(".content-wrapper p", {
    delay: 0.5,
    duration: 1
 })
+tl.from(".hero-buttons a", {
+   y: 30,
+   duration: 1,
+   opacity: 0,
+   stagger: 0.25
+})
 
 const cursor = document.querySelector("#cursor");
 const body = document.querySelector("body")
@@ -39,19 +45,19 @@ body.addEventListener("mousemove", function (e) {
 
 const scrollButton = document.getElementById('scrollButton');
 
-        // Show the button when scrolled down 200px
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                scrollButton.classList.add('show');
-            } else {
-                scrollButton.classList.remove('show');
-            }
-        });
+// Show the button when scrolled down 200px
+window.addEventListener('scroll', () => {
+   if (window.scrollY > 200) {
+      scrollButton.classList.add('show');
+   } else {
+      scrollButton.classList.remove('show');
+   }
+});
 
-        // Scroll to top functionality
-        scrollButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+// Scroll to top functionality
+scrollButton.addEventListener('click', () => {
+   window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+   });
+});

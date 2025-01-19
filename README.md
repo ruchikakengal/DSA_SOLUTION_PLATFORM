@@ -1,37 +1,104 @@
-<h1 align="center" id="title">DSA solution Hub</h1>
+# DSA Solution Platform
 
-<p id="description">This project is a collaborative platform to host and share solutions for common Data Structures and Algorithms (DSA) problems. Whether you're practicing for coding interviews contributing to open source or just aiming to brush up on DSA concepts this hub provides a well-organized accessible collection of solutions.</p>
+The **DSA Solution Platform** is an open-source project designed to help users practice, submit, and review problems in Data Structures and Algorithms (DSA). It provides an interactive environment for users to hone their problem-solving skills, collaborate with others, and track their progress.
 
-<h2>🚀 Demo</h2>
+## ✨ Key Features
 
-[https://priyeshsingh24.github.io/DSA\_SOLUTION\_PLATFORM/](https://priyeshsingh24.github.io/DSA_SOLUTION_PLATFORM/)
-
+- **User Authentication**  
+  - Sign up, log in, and manage your profile using secure authentication (JWT).
   
+- **Categorized Problems**  
+  - Access problems categorized into key DSA topics like:
+    - Arrays
+    - Linked Lists
+    - Trees
+    - Graphs
+    - Dynamic Programming
+    - And more...
+
+- **Multi-Language Support**  
+  - Submit solutions in multiple programming languages including:
+    - C++
+    - Python
+    - Java
+  - Supports syntax highlighting and error handling.
+
+- **Integrated Code Execution**  
+  - Secure sandboxed environment (powered by Docker) for executing code submissions in real-time.
+
+- **Leaderboards**  
+  - Track and compare your performance against other users globally.
+
+- **Discussion Forum**  
+  - Collaborate and share problem-solving approaches with the community.
+
+- **Hints & Official Solutions**  
+  - Access hints for difficult problems and official solutions for guidance.
+
+- **Advanced Search & Filters**  
+  - Easily search problems by name, difficulty, or category, and filter by programming language or topic.
+
+- **Responsive Design**  
+  - Fully responsive design for seamless usage on both desktop and mobile devices.
+
+## 🛠 Tech Stack
+
+- **Frontend**:
+  - **HTML**, **CSS**, **JavaScript** (React.js or Next.js) – Provides a dynamic and interactive user interface.
+
+- **Backend**:
+  - **Node.js**, **Express** – A scalable backend API for handling requests and user management.
+
+- **Database**:
+  - **MongoDB** or **PostgreSQL** – Store data such as user profiles, problem descriptions, submissions, and leaderboard rankings.
+
+- **Code Execution**:
+  - **Docker** – Secure containerized environment for running and testing user-submitted code.
+
+- **Authentication**:
+  - **JWT (JSON Web Tokens)** – Ensures secure authentication and session management.
+
+- **Testing and CI**:
+  - **Jest**, **Mocha**, or **Chai** – To write unit tests and ensure code quality.
+
+## 🚀 Installation Guide
+
+### Prerequisites
+
+Before setting up the platform locally, ensure you have the following installed:
+
+- **Node.js** (v14 or later)  
+  [Install Node.js](https://nodejs.org/)
   
-<h2>🧐 Features</h2>
+- **npm** (Node Package Manager)  
+  npm comes bundled with Node.js.
 
-Here're some of the project's best features:
+- **Docker** (For code execution environment)  
+  [Install Docker](https://www.docker.com/get-started)
 
-<h2>🛠️ Installation Steps:</h2>
 
-<p>1. - A web browser (latest version recommended)</p>
 
-<p>2. - Basic knowledge of Git and GitHub</p>
 
-<p>3. Clone the repository:</p>
 
-```
-git clone https://github.com/PRIYESHSINGH24/DSA_SOLUTION_PLATFORM
-```
 
-<p>4. Open index.html in your browser to run locally</p>
+---
 
-  
-  
-<h2>💻 Built with</h2>
+## 🚀 Installation Guide
 
-Technologies used in the project:
+Follow these steps to set up the project locally:
 
-*   HTML
-*   CSS
-*   JAVASCRIPT
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/username/dsa-solution-platform.git
+   cd dsa-solution-platform
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+3. **Start the development server**
+   ```
+      npm run dev
+   ```
+4. **Access the platform**
+   Open your browser and navigate to http://localhost:3000 on your Browser
+   
